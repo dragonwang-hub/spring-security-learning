@@ -1,6 +1,7 @@
 package com.security.learning.chapter5.controller;
 
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,5 +28,12 @@ public class HelloController {
     public String deleteUser() {
         System.out.println("enter delete");
         return "hello root, you can delete any one";
+    }
+
+    @PostAuthorize("hasAuthority('DELETE')")
+    @GetMapping("/root/api/delete/post")
+    public String postDeleteUser() {
+        System.out.println("enter post delete");
+        return "hello root, you can delete any one. postAuthorize";
     }
 }
