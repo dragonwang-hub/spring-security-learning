@@ -21,4 +21,11 @@ public class HelloController {
         System.out.println("enter hello admin");
         return "hello admin";
     }
+
+    @PreAuthorize("hasAuthority('DELETE')")
+    @GetMapping("/root/api/delete")
+    public String deleteUser() {
+        System.out.println("enter delete");
+        return "hello root, you can delete any one";
+    }
 }
