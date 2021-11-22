@@ -30,7 +30,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin().permitAll()
                 .and()
                 .csrf().disable()
-                .rememberMe().tokenValiditySeconds(60).tokenRepository(persistentTokenRepository);
+                .rememberMe().tokenValiditySeconds(60).tokenRepository(persistentTokenRepository)
+                .and()
+                .logout().logoutSuccessUrl("/login").invalidateHttpSession(true).deleteCookies("JSESSIONID", "remember-me");
 
     }
 
