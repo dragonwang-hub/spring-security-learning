@@ -21,7 +21,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .logout().logoutSuccessUrl("/login").invalidateHttpSession(true)
                 .and()
-                .sessionManagement().sessionFixation().migrateSession().maximumSessions(1).maxSessionsPreventsLogin(true);
+                .sessionManagement().sessionFixation().migrateSession().invalidSessionStrategy(new WebInvalidSessionStrategy())
+                .maximumSessions(1)
+                .maxSessionsPreventsLogin(true);
     }
 
     @Override
