@@ -1,13 +1,13 @@
-package com.security.learning.chapter2.controller;
+package com.security.learning.chapter8.custom1.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-
     @GetMapping("/hello")
-    private String hello() {
-        return "Hello, Security";
+    public String hello() {
+        System.out.println("enter hello controller");
+        return "hello, world";
     }
 }

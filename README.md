@@ -8,3 +8,6 @@
  - 1 RememberMe 的使用，可以记住用户名和密码，下次自动登录。以及logout处理（LogoutHandler的流式处理）逻辑。
  - 2 使用csrfTokenRepository，主要是HttpSessionCsrfTokenRepository(session)，CookieCsrfTokenRepository(cookie)两类，使用LazyCsrfTokenRepository实现非必要不保存csrfToken。
 7. session管理，四种策略，默认为migrateSession。最大会话个数限制，以及限制规则。注册httpSessionEventPublisher监听器保证监听session的创建与销毁。custom InvalidSessionStrategy
+8. 如何给登录页面添加验证码，以防止恶意登录
+   1. 自定义认证逻辑
+   2. 自定义过滤器
