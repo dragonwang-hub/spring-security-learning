@@ -1,4 +1,4 @@
-package com.security.learning.chapter8.configuration;
+package com.security.learning.chapter8.custom1.configuration;
 
 
 import com.google.code.kaptcha.Producer;

@@ -1,4 +1,4 @@
-package com.security.learning.chapter8.controller;
+package com.security.learning.chapter8.custom1.controller;
 
 import com.google.code.kaptcha.Producer;
 import org.springframework.beans.factory.annotation.Autowired;

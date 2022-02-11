@@ -1,4 +1,4 @@
-package com.security.learning.chapter8;
+package com.security.learning.chapter8.custom1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
